@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tron.sergi.arduino.ledControl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/acelerar"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/aumentar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <Button
+            android:id="@+id/disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBottom="@+id/autonomo"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/acelerar"
+            android:layout_toRightOf="@+id/acelerar"
+            android:onClick="dis"
+            android:text="disconnect"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <ImageView
+            android:id="@+id/atras"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_alignLeft="@+id/acelerar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/acelerar"
+            android:layout_marginBottom="57dp"
+            app:srcCompat="@android:drawable/arrow_down_float" />
+
+        <ImageView
+            android:id="@+id/derecha"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/izquierda"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+
+        <ImageView
+            android:id="@+id/izquierda"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_alignTop="@+id/atras"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@+id/derecha"
+            android:layout_toStartOf="@+id/derecha"
+            app:srcCompat="@android:drawable/ic_media_rew" />
+
+        <ImageView
+            android:id="@+id/disminuir"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_alignLeft="@+id/derecha"
+            android:layout_alignStart="@+id/derecha"
+            android:layout_alignTop="@+id/aumentar"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/aumentar"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_above="@+id/izquierda"
+            android:layout_alignLeft="@+id/izquierda"
+            android:layout_alignStart="@+id/izquierda"
+            android:layout_marginBottom="14dp"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <Button
+            android:id="@+id/autonomo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_toEndOf="@+id/disconnect"
+            android:layout_toRightOf="@+id/disconnect"
+            android:onClick="autonomo"
+            android:text="autonomo" />
+
+        <Button
+            android:id="@+id/seguir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/disconnect"
+            android:layout_alignStart="@+id/disconnect"
+            android:layout_below="@+id/disconnect"
+            android:layout_marginTop="9dp"
+            android:onClick="seguir"
+            android:text="seguir" />
+
+        <Button
+            android:id="@+id/sensores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/autonomo"
+            android:layout_alignStart="@+id/autonomo"
+            android:layout_alignTop="@+id/seguir"
+            android:onClick="sensores"
+            android:text="sensores" />
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seguir"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
